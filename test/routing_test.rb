@@ -762,7 +762,7 @@ class RoutingTest < Test::Unit::TestCase
     end
     get '/', {}, { 'HTTP_ACCEPT' => 'text/javascript, */*;q=0.01' }
     assert_body 'application/json;charset=utf-8'
-    get '/', {}, { 'HTTP_ACCEPT' => 'text/html, text/javascript, */*;q=0.01' }
+    get '/', {}, { 'HTTP_ACCEPT' => 'text/html,*/*;q=0.01' }
     assert_body 'text/html;charset=utf-8'
   end
 
